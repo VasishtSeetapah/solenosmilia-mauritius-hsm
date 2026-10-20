@@ -19,7 +19,7 @@
 #     temperature.tif        Bio-ORACLE v3 near-bottom temperature, 2000 to 2020 mean (deg C)
 #     kinetic_energy.tif     KE = 0.5 * rho * U^2 from Bio-ORACLE v3 near-bottom current speed U (m/s), rho = 1025 kg/m3 (N/m2)
 #     geomorphic_class.tif   Seafloor Geomorphic Features Map (Harris et al. 2014), integer class codes
-#   Solenosmilia_variabilis_OBIS_screened.csv   OBIS records after quality screening (8,469 records); columns
+#   Solenosmilia_variabilis_OBIS.csv            OBIS download (8,469 records); columns
 #                                               decimalLongitude, decimalLatitude, depth, year
 #   Solenosmilia_variabilis_sample400.csv       the 400-record sample used for training (375 with complete predictors);
 #                                               same columns
@@ -376,7 +376,7 @@ write.csv(data.frame(quantile = names(q), value = as.numeric(q)), file.path(OUT_
 
 
 # ---- 10. Occurrence records, counts, depth and years (Section 2.2, Figures S1 and S2) and nearest-neighbour distances
-clean <- read.csv(file.path(INPUT_DIR, "Solenosmilia_variabilis_OBIS_screened.csv"))
+clean <- read.csv(file.path(INPUT_DIR, "Solenosmilia_variabilis_OBIS.csv"))
 s400  <- read.csv(file.path(INPUT_DIR, "Solenosmilia_variabilis_sample400.csv"))
 stk   <- rast(file.path(INPUT_DIR, layers)); names(stk) <- vars
 s375  <- s400[complete.cases(extract(stk, cbind(s400$decimalLongitude, s400$decimalLatitude))), ]
@@ -386,7 +386,7 @@ summ_occ <- function(d, label) {
              depth_max_m = max(dep, na.rm = TRUE), n_with_year = sum(!is.na(yr)),
              year_min = min(yr, na.rm = TRUE), year_max = max(yr, na.rm = TRUE))
 }
-write.csv(rbind(summ_occ(clean, "screened OBIS table"), summ_occ(s400, "sample of 400"), summ_occ(s375, "used by the model")),
+write.csv(rbind(summ_occ(clean, "OBIS download"), summ_occ(s400, "sample of 400"), summ_occ(s375, "used by the model")),
           file.path(OUT_TAB, "occurrence_summary.csv"), row.names = FALSE)
 s375$depth <- as.numeric(s375$depth)
 ggsave(file.path(OUT_FIG, "FigS1_depth_histogram.png"),

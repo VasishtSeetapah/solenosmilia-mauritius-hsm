@@ -56,8 +56,8 @@ The input data are not distributed with this repository. They can be obtained fr
 | `temperature.tif` | Near-bottom temperature, 2000 to 2020 mean (°C) | Bio-ORACLE v3 (https://www.bio-oracle.org) |
 | `kinetic_energy.tif` | KE = ½ρU² in N m⁻², with U the near-bottom current speed (m s⁻¹) and ρ = 1,025 kg m⁻³ | Derived from Bio-ORACLE v3 |
 | `geomorphic_class.tif` | Integer class codes of the Seafloor Geomorphic Features Map | Harris et al. (2014) |
-| `Solenosmilia_variabilis_OBIS_screened.csv` | Screened OBIS records, with columns `decimalLongitude`, `decimalLatitude`, `depth` and `year` | OBIS (https://obis.org) |
-| `Solenosmilia_variabilis_sample400.csv` | The 400-record training sample, with the same columns | Random sample of the screened records, stratified by ocean basin |
+| `Solenosmilia_variabilis_OBIS.csv` | OBIS download (8,469 records), with columns `decimalLongitude`, `decimalLatitude`, `depth` and `year` | OBIS (https://obis.org) |
+| `Solenosmilia_variabilis_sample400.csv` | The 400-record training sample, with the same columns | Random sample of the downloaded records, stratified by ocean basin |
 | `OBIS_other_scleractinians.csv` | Records of four other scleractinian species, with columns `species`, `lon` and `lat` (target-group test only) | OBIS |
 | `boundaries/EEZ_MU.shp`, `Chagos.shp`, `Tromelin.shp`, `JMCA.shp` | Maritime zones of the Republic of Mauritius and the Joint Management Area | See the paper |
 
