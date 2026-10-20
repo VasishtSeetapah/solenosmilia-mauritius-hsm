@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Habitat suitability model for Solenosmilia variabilis in the Mauritius region (R code)"
+version: 1.0.0
+date-released: 2026-10-20
+license: MIT
+authors:
+  - family-names: Seetapah
+    given-names: Vasisht
+    orcid: "https://orcid.org/0009-0007-7657-1669"
+    affiliation: "University of Mauritius"
+  - family-names: Jogee
+    given-names: Shakeel Yavan
+    affiliation: "University of Mauritius"
+keywords:
+  - deep-sea corals
+  - habitat suitability modelling
+  - MaxEnt
+  - Solenosmilia variabilis
+  - Mauritius

@@ -1,0 +1,24 @@
+{
+  "title": "Habitat suitability model for Solenosmilia variabilis in the Mauritius region (R code)",
+  "upload_type": "software",
+  "description": "R code for Seetapah V. and Jogee S.Y., \"Predicting deep-sea coral habitat in a data-poor region: a globally calibrated habitat model for Solenosmilia variabilis in the Mauritius region\", submitted to Deep-Sea Research Part II.",
+  "creators": [
+    {
+      "name": "Seetapah, Vasisht",
+      "affiliation": "University of Mauritius",
+      "orcid": "0009-0007-7657-1669"
+    },
+    {
+      "name": "Jogee, Shakeel Yavan",
+      "affiliation": "University of Mauritius"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "deep-sea corals",
+    "habitat suitability modelling",
+    "MaxEnt",
+    "Solenosmilia variabilis",
+    "Mauritius"
+  ]
+}
